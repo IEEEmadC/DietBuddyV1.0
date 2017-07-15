@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffff"
+    tools:context="com.dietbuddy.tralice.mapsapplication.login_activity">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/diet_buddy"
+        android:id="@+id/imageView"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="155dp" />
+
+    <RelativeLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        android:layout_below="@id/imageView"
+        android:layout_margin="10dp"
+        android:windowSoftInputMode="adjustResize"
+        >
+
+
+        <!--com.rey.material.widget.EditText
+            android:layout_height="wrap_content"
+            android:layout_width="100dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            app:et_labelEnable="true"
+            android:hint="First Name"
+
+            app:et_labelTextColor="#f40606"
+            app:et_supportSingleLine="true"
+            app:et_dividerColor="#000"
+            app:et_dividerHeight="1dp"
+
+            /-->
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/user_input_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/userName_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="User Name"
+                android:nextFocusDown="@+id/weight_text"
+                android:maxLines="1"/>
+
+
+        </android.support.design.widget.TextInputLayout>
+
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/text_input_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/user_input_layout">
+
+            <EditText
+                android:id="@+id/weight_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/user_input_layout"
+                android:hint="Weight(kg)"
+                android:inputType="number"
+                android:nextFocusDown="@+id/height_text"
+             />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/height_input_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/text_input_layout">
+
+            <EditText
+                android:id="@+id/height_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/user_input_layout"
+                android:hint="Height(m)"
+                android:inputType="numberDecimal"
+                android:nextFocusForward="@+id/spinner_gender"
+                 />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@+id/height_input_layout">
+
+            <Spinner
+                android:id="@+id/spinner_gender"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/height_input_layout"
+                android:nextFocusDown="@+id/birthday_text"
+                >
+            </Spinner>
+
+        <EditText
+            android:id="@+id/birthday_text"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:hint="Birthday"
+
+            >
+
+        </EditText>
+
+        </LinearLayout>
+
+
+
+        <com.rey.material.widget.Button
+            android:id="@+id/createuser_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Create User"
+            android:layout_alignParentBottom="true"
+            />
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

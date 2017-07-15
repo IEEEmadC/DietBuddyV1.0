@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- A CardView that contains a TextView -->
+<android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/card_view"
+    android:layout_gravity="center"
+    android:layout_width="match_parent"
+    android:layout_height="240dp"
+    card_view:cardCornerRadius="4dp"
+    card_view:cardPreventCornerOverlap="true"
+    card_view:cardUseCompatPadding="true"
+    card_view:cardBackgroundColor="#ffffff"
+    android:elevation="30dp"
+    android:contextClickable="true"
+    android:clickable="true"
+    android:fadeScrollbars="true"
+    android:padding="20dp"
+    >
+
+    <ImageView
+        android:id="@+id/foodImage"
+        android:layout_height="180dp"
+        android:layout_width="match_parent"
+        android:scaleType="fitXY"
+        android:textAlignment="gravity"
+        />
+
+
+    <TextView
+
+        android:id="@+id/food_description"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_gravity="bottom"
+        android:padding="10dp"
+        android:textColor="#000000"
+        android:textSize="18dp"
+        android:lines="2"
+
+        />
+
+
+
+
+</android.support.v7.widget.CardView>
+
+
+
+
+

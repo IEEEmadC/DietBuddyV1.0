@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.dietbuddy.tralice.mapsapplication.bmi_activity"
+    android:padding="10dp">
+<RelativeLayout
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent">
+
+
+
+    <RelativeLayout
+        android:id="@+id/data"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/first"
+        android:orientation="horizontal"
+        android:baselineAligned="false"
+        android:layout_height="80dp"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="#ffff"
+        android:layout_marginTop="10dp"
+        >
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="80dp"
+            android:layout_weight="1">
+
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/text_age_input_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                >
+
+                <EditText
+                    android:id="@+id/age_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/user_input_layout"
+                    android:hint="Age(years)"
+                    android:textSize="24dp"
+                    android:textAlignment="center"
+                    android:inputType="number"
+
+                    />
+
+            </android.support.design.widget.TextInputLayout>
+
+
+
+
+
+
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@android:color/holo_blue_light"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp">
+
+        </View>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="80dp"
+            android:layout_weight="1">
+
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/text_height_input_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/user_input_layout">
+
+                <EditText
+                    android:id="@+id/height_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/user_input_layout"
+                    android:hint="Height(m)"
+                    android:textSize="24dp"
+                    android:textAlignment="center"
+                    android:inputType="numberDecimal"
+
+                    />
+
+            </android.support.design.widget.TextInputLayout>
+
+
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:baselineAligned="false"
+        android:layout_height="80dp"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="#ffff"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/first"
+        >
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="80dp"
+            android:layout_weight="1">
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/text_input_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/user_input_layout">
+
+                <EditText
+                    android:id="@+id/weight_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/user_input_layout"
+                    android:hint="Weight(kg)"
+                    android:textSize="24dp"
+                    android:textAlignment="center"
+                    android:inputType="numberDecimal"
+
+                    />
+
+            </android.support.design.widget.TextInputLayout>
+
+
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@android:color/holo_blue_light"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp">
+
+        </View>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="80dp"
+            android:layout_weight="1">
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    android:id="@+id/gender_male"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:paddingLeft="15dp"
+                    android:layout_marginLeft="12dp"
+                    android:text="Male"
+                    android:textSize="24dp"
+                    />
+
+                <RadioButton
+                    android:id="@+id/gender_female"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:paddingLeft="15dp"
+                    android:layout_marginLeft="12dp"
+                    android:text="Female"
+                    android:textSize="24dp"
+                    android:layout_below="@+id/gender_male"/>
+
+            </RadioGroup>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+    </RelativeLayout>
+    <Button
+        android:id="@+id/start_BMI"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="START"
+        android:layout_below="@id/data"/>
+    <TextView
+        android:id="@+id/bmi_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/start_BMI"
+        android:text="BMI"
+        android:padding="10dp"
+
+        />
+    <TextView
+        android:id="@+id/ideal_weight_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:layout_below="@+id/bmi_text"
+        android:text="IDEAL WEIGHT"/>
+
+    <TextView
+        android:id="@+id/result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:layout_below="@+id/ideal_weight_text"
+        android:layout_centerHorizontal="true"
+        android:textSize="24dp"/>
+
+    <com.github.anastr.speedviewlib.SpeedView
+        android:id="@+id/bmi_meter"
+        android:layout_height="200dp"
+        android:layout_width="200dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_below="@+id/result"
+        app:sv_unit=""
+        android:layout_centerHorizontal="true"
+        />
+
+        <TextView
+            android:id="@+id/underWeight"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/bmi_meter"
+            android:text="UnderWeight = BMI of 18.5 less "
+            android:textAlignment="center"
+            android:textColor="#fff"
+            android:textSize="18dp"
+            android:background="#d2cc4d"
+            android:padding="12dp"
+            />
+
+        <TextView
+            android:id="@+id/normalWeight"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/underWeight"
+            android:text="Normal Weight = BMI between 18.5–24.9  "
+            android:textAlignment="center"
+            android:textColor="#fff"
+            android:textSize="18dp"
+            android:background="#2b9b21"
+            android:padding="12dp"
+        />
+    <TextView
+        android:id="@+id/overWeight"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/normalWeight"
+        android:text="Over Weight = BMI between 25–29.9 "
+        android:textAlignment="center"
+        android:textColor="#fff"
+        android:textSize="18dp"
+        android:background="#e6733a"
+        android:padding="12dp"
+        />
+    <TextView
+        android:id="@+id/obesityWeight"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/overWeight"
+        android:text="Obesity = BMI of 30 or greater "
+        android:textAlignment="center"
+        android:textColor="#fff"
+        android:textSize="18dp"
+        android:background="#ff0000"
+        android:padding="12dp"
+        />
+
+
+</RelativeLayout>
+</ScrollView>
